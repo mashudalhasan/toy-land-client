@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
-import image1 from "../../../assets/ORVZE40.jpg";
+import Lottie from "lottie-react";
+import plane from "../../../assets/lotties/112253-plane.json";
 
 const Banner = () => {
   return (
     <div className="hero lg:min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse lg:gap-0 justify-between">
-        <img src={image1} className="w-full lg:max-w-lg h-auto" />
+        <Lottie
+          animationData={plane}
+          loop={true}
+          className="w-full lg:max-w-lg h-auto"
+        />
         <div className="lg:w-1/2">
           <h1 className="text-4xl lg:text-5xl font-bold">
             Welcome to <br className="lg:hidden" /> Toy Land 🏎️
