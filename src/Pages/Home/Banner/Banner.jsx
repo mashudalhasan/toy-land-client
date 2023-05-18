@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import image from "../../../assets/—Pngtree—3d rendering of sport car_4397360.png";
 import image1 from "../../../assets/ORVZE40.jpg";
 
 const Banner = () => {
@@ -9,7 +8,7 @@ const Banner = () => {
         <img src={image1} className="w-full lg:max-w-lg h-auto" />
         <div className="lg:w-1/2">
           <h1 className="text-4xl lg:text-5xl font-bold">
-            Welcome to <br className="lg:hidden"/> Toy Land 🏎️
+            Welcome to <br className="lg:hidden" /> Toy Land 🏎️
           </h1>
           <p className="py-6 text-gray-600">
             Experience boundless joy at Toy Land! Discover a world of
