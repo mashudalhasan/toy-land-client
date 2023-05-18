@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
-import plane from "../../../assets/lotties/112253-plane.json";
+import plane from "../../../assets/lotties/73278-my-little-plane-ii.json";
 
 const Banner = () => {
   return (
