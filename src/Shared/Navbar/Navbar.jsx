@@ -1,17 +1,43 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch((error) => console.error(error));
+  };
+
   const navItems = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "text-info" : "")}
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <Link to="/allToys">All Toys</Link>
+        <NavLink
+          to="/allToys"
+          className={({ isActive }) => (isActive ? "text-info" : "")}
+        >
+          All Toys
+        </NavLink>
       </li>
       <li>
-        <Link to="/blogs">Blogs</Link>
+        <NavLink
+          to="/blog"
+          className={({ isActive }) => (isActive ? "text-info" : "")}
+        >
+          Blog
+        </NavLink>
       </li>
     </>
   );
@@ -19,8 +45,11 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
-        <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+        <div className="dropdown mr-5">
+          <label
+            tabIndex={0}
+            className="btn btn-outline btn-info border-none lg:hidden"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -41,6 +70,11 @@ const Navbar = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navItems}
+            {user && (
+              <li>
+                <Link onClick={handleLogOut}>Logout</Link>
+              </li>
+            )}
           </ul>
         </div>
         <Link to="/">
@@ -60,9 +94,46 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 font-medium">{navItems}</ul>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-outline btn-info capitalize rounded w-1/2 md:w-1/4">
-          <Link to="login">Login</Link>
-        </button>
+        {user && (
+          <span className="mr-2 lg:mr-4 border-4 rounded-full border-slate-100 transition hover:scale-110 hover:shadow-xl">
+            <img
+              className="w-10 h-10 rounded-full"
+              src={user?.photoURL}
+              alt=""
+            />
+          </span>
+        )}
+        {user ? (
+          <Link
+            onClick={handleLogOut}
+            className="hidden lg:visible lg:inline-flex items-center gap-1 rounded-md bg-info text-white px-2 lg:px-8 py-3 transition hover:bg-sky-500 active:bg-sky-500"
+            to="/login"
+          >
+            <span className="text-sm font-medium"> Logout </span>{" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
+              />
+            </svg>
+          </Link>
+        ) : (
+          <Link
+            className="inline-flex items-center gap-1 rounded-md bg-info text-white px-2 lg:px-8 py-3 transition hover:bg-sky-500 active:bg-sky-500"
+            to="/login"
+          >
+            <span className="text-sm font-medium"> Login </span>{" "}
+            <FaLongArrowAltRight />
+          </Link>
+        )}
       </div>
     </div>
   );

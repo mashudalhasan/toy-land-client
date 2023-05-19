@@ -1,25 +1,67 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
-import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { useContext, useState } from "react";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Login = () => {
+  const { signIn, googleSignIn } = useContext(AuthContext);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+
+
+  const from = location.state?.from?.pathname || "/";
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.error(error.message);
+      });
+  };
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+
+    signIn(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        setError("");
+        event.target.reset();
+      })
+      .catch((error) => {
+        console.error(error.message);
+        setError(error.message);
+      });
+  };
   return (
-    <div>
+    <div className="ml-5 md:ml-0">
       <section className="bg-[#F4F7FF] py-20 lg:py-[120px]">
         <div className="container mx-auto">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div className="relative mx-auto max-w-[525px] overflow-hidden rounded-lg bg-white py-16 px-10 text-center sm:px-12 md:px-[60px]">
+              <div className="relative mx-auto max-w-[525px] overflow-hidden bg-white py-16 px-10 text-center sm:px-12 md:px-[60px]">
                 <div className="mb-10 text-center md:mb-16">
                   <Link to="/" className="mx-auto inline-block max-w-[160px]">
                     <img src={logo} alt="logo" />
                   </Link>
                 </div>
-                <form>
+                <form onSubmit={handleLogin}>
                   <div className="mb-6">
                     <input
                       type="email"
+                      name="email"
                       placeholder="Email"
                       className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none focus:border-info focus-visible:shadow-none"
                     />
@@ -27,51 +69,48 @@ const Login = () => {
                   <div className="mb-6">
                     <input
                       type="password"
+                      name="password"
                       placeholder="Password"
                       className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none focus:border-info focus-visible:shadow-none"
                     />
                   </div>
                   <div className="mb-10">
-                    <input
+                    <button
                       type="submit"
-                      value="Sign In"
                       className=" w-full cursor-pointer rounded-md bg-info py-3 px-5 text-base text-white transition hover:bg-opacity-90"
-                    />
+                    >
+                      Login
+                    </button>
+                  </div>
+
+                  <div className="mb-5">
+                    <p className="text-error font-medium">
+                      <small>{error}</small>
+                    </p>
                   </div>
                 </form>
                 <p className="mb-6 text-base text-[#adadad]">Connect With</p>
-                <ul className="-mx-2 mb-12 flex justify-between">
+                <ul className="-mx-2 mb-12">
                   <li className="w-full px-2">
                     <Link
-                      href="javascript:void(0)"
-                      className="flex h-11 items-center justify-center rounded-md bg-black hover:bg-opacity-80"
-                    >
-                      <FaGithub className="text-white text-2xl" />
-                    </Link>
-                  </li>
-                  <li className="w-full px-2">
-                    <a
-                      href="javascript:void(0)"
+                      onClick={handleGoogleSignIn}
                       className="flex h-11 items-center justify-center rounded-md bg-base-200 hover:bg-opacity-50"
                     >
                       <FcGoogle className="text-2xl" />
-                    </a>
+                    </Link>
                   </li>
                 </ul>
-                <a
-                  href="javascript:void(0)"
-                  className="mb-2 inline-block text-base text-[#adadad] hover:text-info hover:underline"
+                <Link
+                  to="/"
+                  className="mb-2 inline-block text-base text-[#adadad] hover:text-error hover:underline"
                 >
                   Forget Password?
-                </a>
+                </Link>
                 <p className="text-base text-[#adadad]">
-                  Not a member yet?
-                  <a
-                    href="javascript:void(0)"
-                    className="text-info hover:underline"
-                  >
+                  Not a member yet?{" "}
+                  <Link to="/signup" className="text-error hover:underline">
                     Sign Up
-                  </a>
+                  </Link>
                 </p>
                 <div>
                   <span className="absolute top-1 right-1">

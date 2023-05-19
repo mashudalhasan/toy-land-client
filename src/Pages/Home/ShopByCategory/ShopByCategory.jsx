@@ -7,7 +7,7 @@ const ShopByCategory = () => {
   const [shops, setShops] = useState([]);
 
   useEffect(() => {
-    fetch("toys.json")
+    fetch("http://localhost:5000/products")
       .then((res) => res.json())
       .then((data) => setShops(data));
   }, []);
@@ -17,8 +17,10 @@ const ShopByCategory = () => {
   };
 
   return (
-    <div>
-      <h2 className="text-center text-3xl font-semibold mb-5">Shop By Category</h2>
+    <div className="mb-10">
+      <h2 className="text-center text-3xl font-semibold mb-5">
+        Shop By Category
+      </h2>
       <Tabs>
         <TabList>
           <Tab>Cars</Tab>
@@ -29,7 +31,7 @@ const ShopByCategory = () => {
         <TabPanel>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
             {getCategoryShops("Cars").map((shop) => (
-              <ShopCard key={shop.price} shop={shop} />
+              <ShopCard key={shop._id} shop={shop} />
             ))}
           </div>
         </TabPanel>

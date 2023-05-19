@@ -1,11 +1,22 @@
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+import { useState } from "react";
+import ProductDetails from "../../../Shared/ProductDetails/ProductDetails";
 
 const ShopCard = ({ shop }) => {
-  const { name, picture, price, rating, subCategory } = shop;
+  const { _id, name, picture, price, rating, subCategory } = shop;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
-    <div className="card w-96 bg-base-100 shadow-xl mx-auto">
+    <div className="card w-11/12 md:w-96 bg-base-100 shadow-xl mx-auto">
       <figure>
         <img src={picture} alt="Shoes" />
       </figure>
@@ -21,14 +32,17 @@ const ShopCard = ({ shop }) => {
             <div className="badge badge-outline">{rating}</div>
           </div>
           <div>
-            <Link to={`/`}>
-              <button className="text-info transition hover:scale-150 hover:shadow-xl">
-                <FaArrowRight />
-              </button>
-            </Link>
+            <button
+              className="text-info transition hover:scale-150 hover:shadow-xl"
+              onClick={openModal}
+            >
+              <FaArrowRight />
+            </button>
           </div>
         </div>
       </div>
+
+      {isModalOpen && <ProductDetails shop={shop} closeModal={closeModal} />}
     </div>
   );
 };
