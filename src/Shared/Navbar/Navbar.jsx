@@ -43,7 +43,7 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        <Link to='/'>
+        <Link to="/">
           <div className="flex justify-center items-center">
             <img
               src={logo}
@@ -60,7 +60,9 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 font-medium">{navItems}</ul>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-outline btn-warning capitalize rounded w-1/2 md:w-1/4">Login</button>
+        <button className="btn btn-outline btn-info capitalize rounded w-1/2 md:w-1/4">
+          <Link to="login">Login</Link>
+        </button>
       </div>
     </div>
   );

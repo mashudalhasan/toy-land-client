@@ -22,7 +22,7 @@ const ShopCard = ({ shop }) => {
           </div>
           <div>
             <Link to={`/`}>
-              <button className="text-red-600 ">
+              <button className="text-info transition hover:scale-150 hover:shadow-xl">
                 <FaArrowRight />
               </button>
             </Link>

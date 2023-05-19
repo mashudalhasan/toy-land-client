@@ -21,12 +21,12 @@ const Banner = () => {
             magic of childhood!
           </p>
           <Link
-            className="group relative inline-block overflow-hidden border border-warning px-8 py-3 rounded"
+            className="group relative inline-block overflow-hidden border border-info px-8 py-3 rounded"
             to="/login"
           >
-            <span className="absolute inset-y-0 left-0 w-[2px] bg-warning transition-all group-hover:w-full group-active:bg-yellow-400"></span>
+            <span className="absolute inset-y-0 left-0 w-[2px] bg-info transition-all group-hover:w-full group-active:bg-info"></span>
 
-            <span className="relative text-sm font-medium text-warning transition-colors group-hover:text-white">
+            <span className="relative text-sm font-medium text-info transition-colors group-hover:text-white">
               Learn More
             </span>
           </Link>
