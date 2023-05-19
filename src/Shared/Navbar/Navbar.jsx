@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { Tooltip } from "react-tippy";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
@@ -96,11 +97,19 @@ const Navbar = () => {
       <div className="navbar-end">
         {user && (
           <span className="mr-2 lg:mr-4 border-4 rounded-full border-slate-100 transition hover:scale-110 hover:shadow-xl">
-            <img
-              className="w-10 h-10 rounded-full"
-              src={user?.photoURL}
-              alt=""
-            />
+            <Tooltip
+              title={user?.displayName}
+              position="bottom"
+              trigger="mouseenter"
+              theme="light"
+              animation="perspective"
+            >
+              <img
+                className="w-10 h-10 rounded-full"
+                src={user?.photoURL}
+                alt=""
+              />
+            </Tooltip>
           </span>
         )}
         {user ? (

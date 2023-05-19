@@ -18,7 +18,7 @@ const ShopByCategory = () => {
 
   return (
     <div className="mb-10">
-      <h2 className="text-center text-3xl font-semibold mb-5">
+      <h2 className="text-center text-3xl font-bold mb-5">
         Shop By Category
       </h2>
       <Tabs>

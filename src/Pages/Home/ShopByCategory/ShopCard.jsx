@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { useState } from "react";
 import ProductDetails from "../../../Shared/ProductDetails/ProductDetails";
 
 const ShopCard = ({ shop }) => {
-  const { _id, name, picture, price, rating, subCategory } = shop;
+  const { name, picture, price, rating, subCategory } = shop;
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -23,7 +22,7 @@ const ShopCard = ({ shop }) => {
       <div className="card-body">
         <h2 className="card-title">
           {name}
-          <div className="badge badge-secondary">NEW</div>
+          <div className="badge badge-xs badge-info px-2 py-2 text-white font-semibold">NEW</div>
         </h2>
         <p>Price: ${price}</p>
         <div className="card-actions justify-between">
