@@ -1,8 +1,8 @@
 [
   {
     "name": "Red Sports Car",
-    "picture": "red_sports_car.jpg",
-    "sub-category": "Cars",
+    "picture": "https://www.littleriders.com.au/assets/full/DK-M720S-R.jpg?20230419134613",
+    "subCategory": "Cars",
     "seller": {
       "name": "Toy World",
       "email": "toyworld@example.com"
@@ -14,8 +14,8 @@
   },
   {
     "name": "Yellow Race Car",
-    "picture": "yellow_race_car.jpg",
-    "sub-category": "Cars",
+    "picture": "https://m.media-amazon.com/images/I/616zLQ-c6dL._SL1500_.jpg",
+    "subCategory": "Cars",
     "seller": {
       "name": "Kids' Toys",
       "email": "kidstoys@example.com"
@@ -27,8 +27,8 @@
   },
   {
     "name": "Blue Monster Truck",
-    "picture": "blue_monster_truck.jpg",
-    "sub-category": "Trucks",
+    "picture": "https://www.ubuy.com.bd/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNzFzV0hIdlFPZkwuX0FDX1NMMTUwMF8uanBn.jpg",
+    "subCategory": "Trucks",
     "seller": {
       "name": "Kids' Paradise",
       "email": "kidsparadise@example.com"
@@ -39,9 +39,9 @@
     "description": "Get ready for some off-road adventures with this powerful blue monster truck toy. It features oversized wheels and a sturdy construction for rough terrains."
   },
   {
-    "name": "Green Pickup Truck",
-    "picture": "green_pickup_truck.jpg",
-    "sub-category": "Trucks",
+    "name": "Black Pickup Truck",
+    "picture": "https://ae01.alicdn.com/kf/S97168bfc3121434480683211dedabbd0o/1-32-Scale-Diecast-Toy-Vehicle-Model-Ford-F-150-Off-Road-Pickup-Truck-Car-Pull.jpg_640x640.jpg",
+    "subCategory": "Trucks",
     "seller": {
       "name": "Toys Unlimited",
       "email": "toysunlimited@example.com"
@@ -52,9 +52,9 @@
     "description": "Load up and deliver goods with this green pickup truck toy. It has a realistic design, working doors, and a spacious cargo bed for all your hauling needs."
   },
   {
-    "name": "Yellow Fighter Jet",
-    "picture": "yellow_fighter_jet.jpg",
-    "sub-category": "Airplanes",
+    "name": "SEMKY Militery Jet",
+    "picture": "https://m.media-amazon.com/images/I/81e18tsl7YL.jpg",
+    "subCategory": "Airplanes",
     "seller": {
       "name": "Toys Galore",
       "email": "toysgalore@example.com"
@@ -65,9 +65,9 @@
     "description": "Take to the skies with this amazing yellow fighter jet toy. It has realistic detailing, retractable landing gear, and movable wings for high-flying action."
   },
   {
-    "name": "Red Propeller Plane",
-    "picture": "red_propeller_plane.jpg",
-    "sub-category": "Airplanes",
+    "name": "Blue Propeller Plane",
+    "picture": "https://i.pinimg.com/originals/b4/ae/6e/b4ae6eb3ba42db07985082579b87c935.jpg",
+    "subCategory": "Airplanes",
     "seller": {
       "name": "Playtime Toys",
       "email": "playtimetoys@example.com"
