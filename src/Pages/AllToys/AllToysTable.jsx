@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import ProductDetails from "../../Shared/ProductDetails/ProductDetails";
+import Swal from "sweetalert2";
 
 const AllToysTable = ({ shop }) => {
   const { user } = useContext(AuthContext);
@@ -13,6 +14,19 @@ const AllToysTable = ({ shop }) => {
 
   const closeModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handlePopUp = () => {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Please Login to View Details!",
+      showDenyButton: true,
+      denyButtonText: "Cancel",
+      showConfirmButton: false,
+      footer:
+        '<a href="/login" class="text-sky-800">Go for <span class="font-semibold underline">Login</span></a>',
+    });
   };
 
   return (
@@ -33,7 +47,7 @@ const AllToysTable = ({ shop }) => {
       <td>{quantity}</td>
       <th>
         <button
-          onClick={openModal}
+          onClick={user ? openModal : handlePopUp}
           className="btn bg-info btn-xs border-none hover:bg-sky-500"
         >
           details
