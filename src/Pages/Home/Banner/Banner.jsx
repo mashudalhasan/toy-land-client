@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
-import plane from "../../../assets/lotties/73278-my-little-plane-ii.json";
+import bannerCar from "../../../assets/lotties/93387-car-insurance-offers-loading-page.json";
 
 const Banner = () => {
   return (
     <div className="hero lg:min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse lg:gap-0 justify-between">
         <Lottie
-          animationData={plane}
+          animationData={bannerCar}
           loop={true}
-          className="w-full lg:max-w-lg h-auto"
+          className="w-full lg:max-w-lg h-auto transform rotate-180 scale-y-[-1]"
         />
         <div className="lg:w-1/2">
           <h1 className="text-4xl lg:text-5xl font-bold">
