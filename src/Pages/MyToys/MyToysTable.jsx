@@ -4,7 +4,7 @@ import ProductDetails from "../../Shared/ProductDetails/ProductDetails";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const MyToysTable = ({ shop }) => {
+const MyToysTable = ({ shop, handleDelete }) => {
   const { user } = useContext(AuthContext);
   const { _id, name, picture, price, quantity, category } = shop;
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,6 +16,11 @@ const MyToysTable = ({ shop }) => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
+  const handleDeleteClick = () => {
+    handleDelete(_id); // Call the handleDelete function passed as a prop
+  };
+
   return (
     <tr>
       <td>
@@ -46,7 +51,7 @@ const MyToysTable = ({ shop }) => {
             details
           </button>
           <button
-            onClick={openModal}
+            onClick={handleDeleteClick}
             className="btn bg-error btn-xs border-none hover:bg-red-500"
           >
             <FaTrash />
