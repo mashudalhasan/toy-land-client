@@ -3,8 +3,10 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { FaSortAlphaDown, FaSortAlphaUp } from "react-icons/fa";
 import MyToysTable from "./MyToysTable";
 import Swal from "sweetalert2";
+import useTitle from "../../hooks/useTitle";
 
 const MyToys = () => {
+  useTitle("My Toys");
   const { user } = useContext(AuthContext);
   const [myToys, setMyToys] = useState([]);
   const [toys, setToys] = useState(myToys);

@@ -2,8 +2,10 @@ import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import AllToysTable from "./AllToysTable";
 import { FaSortAlphaDown, FaSortAlphaUp } from "react-icons/fa";
+import useTitle from "../../hooks/useTitle";
 
 const AllToys = () => {
+  useTitle("All Toys");
   const shops = useLoaderData();
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOrder, setSortOrder] = useState("asc"); // State for sorting order
