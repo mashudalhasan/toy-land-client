@@ -17,7 +17,7 @@ const ShopByCategory = () => {
   };
 
   return (
-    <div className="mb-10">
+    <div className="mb-10" data-aos="fade-left">
       <h2 className="text-center text-3xl font-bold mb-5">Shop By Category</h2>
       <Tabs>
         <TabList>
