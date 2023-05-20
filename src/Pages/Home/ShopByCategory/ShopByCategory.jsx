@@ -13,14 +13,12 @@ const ShopByCategory = () => {
   }, []);
 
   const getCategoryShops = (category) => {
-    return shops.filter((shop) => shop.subCategory === category);
+    return shops.filter((shop) => shop.category === category);
   };
 
   return (
     <div className="mb-10">
-      <h2 className="text-center text-3xl font-bold mb-5">
-        Shop By Category
-      </h2>
+      <h2 className="text-center text-3xl font-bold mb-5">Shop By Category</h2>
       <Tabs>
         <TabList>
           <Tab>Cars</Tab>
@@ -30,22 +28,22 @@ const ShopByCategory = () => {
 
         <TabPanel>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
-            {getCategoryShops("Cars").map((shop) => (
+            {getCategoryShops("Car").map((shop) => (
               <ShopCard key={shop._id} shop={shop} />
             ))}
           </div>
         </TabPanel>
         <TabPanel>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
-            {getCategoryShops("Trucks").map((shop) => (
-              <ShopCard key={shop.price} shop={shop} />
+            {getCategoryShops("Truck").map((shop) => (
+              <ShopCard key={shop._id} shop={shop} />
             ))}
           </div>
         </TabPanel>
         <TabPanel>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
-            {getCategoryShops("Airplanes").map((shop) => (
-              <ShopCard key={shop.price} shop={shop} />
+            {getCategoryShops("Airplane").map((shop) => (
+              <ShopCard key={shop._id} shop={shop} />
             ))}
           </div>
         </TabPanel>

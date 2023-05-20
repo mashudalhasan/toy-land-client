@@ -32,6 +32,16 @@ const Navbar = () => {
           All Toys
         </NavLink>
       </li>
+      {user && (
+        <li>
+          <NavLink
+            to="/addToy"
+            className={({ isActive }) => (isActive ? "text-info" : "")}
+          >
+            Add Toy
+          </NavLink>
+        </li>
+      )}
       <li>
         <NavLink
           to="/blog"

@@ -2,7 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 
 const ProductDetails = ({ shop, closeModal }) => {
-  const { name, picture, price, rating, subCategory, description } = shop;
+  const { name, picture, price, rating, category, description } = shop;
 
   return (
     <div>
@@ -50,7 +50,7 @@ const ProductDetails = ({ shop, closeModal }) => {
                 </Dialog.Title>
 
                 <div className="mt-2">
-                  <img src={picture} alt={name} className="w-full" />
+                  <img src={picture} alt={name} className="w-full rounded-md" />
                 </div>
 
                 <div className="mt-4">
@@ -63,7 +63,7 @@ const ProductDetails = ({ shop, closeModal }) => {
                     </p>
                     <div className="flex justify-center items-center gap-2">
                       <div className="badge badge-error font-medium text-xs lg:text-sm text-white">
-                        {subCategory}
+                        {category}
                       </div>
                       <div className="badge badge-warning font-medium text-xs lg:text-sm text-white">
                         {rating}

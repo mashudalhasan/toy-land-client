@@ -3,7 +3,7 @@ import { useState } from "react";
 import ProductDetails from "../../../Shared/ProductDetails/ProductDetails";
 
 const ShopCard = ({ shop }) => {
-  const { name, picture, price, rating, subCategory } = shop;
+  const { name, picture, price, rating, category } = shop;
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -17,7 +17,7 @@ const ShopCard = ({ shop }) => {
   return (
     <div className="card w-11/12 md:w-96 bg-base-100 shadow-xl mx-auto">
       <figure>
-        <img src={picture} alt="Shoes" />
+        <img src={picture} alt="Toys" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">
@@ -27,7 +27,7 @@ const ShopCard = ({ shop }) => {
         <p>Price: ${price}</p>
         <div className="card-actions justify-between">
           <div className="flex justify-center items-center gap-2">
-            <div className="badge badge-outline">{subCategory}</div>
+            <div className="badge badge-outline">{category}</div>
             <div className="badge badge-outline">{rating}</div>
           </div>
           <div>

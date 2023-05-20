@@ -1,24 +1,19 @@
+import logo from "../../assets/logo.png";
+
 const Footer = () => {
   return (
-    <div className="ml-5 md:ml-0">
+    <div>
       <footer className="relative z-10 bg-white pt-20 pb-10 lg:pt-[120px] lg:pb-20">
         <div className="container mx-auto">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
+          <div className=" flex flex-wrap">
+            <div className="w-4/5 px-4 sm:w-2/3 lg:w-3/12">
               <div className="mb-10 w-full">
-                <a
-                  href='/'
-                  className="mb-6 inline-block max-w-[160px]"
-                >
-                  <img
-                    src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo.svg"
-                    alt="logo"
-                    className="max-w-full"
-                  />
+                <a href="/" className="mb-6 inline-block max-w-[160px]">
+                  <img src={logo} alt="logo" className="w-1/2" />
                 </a>
                 <p className="text-body-color mb-7 text-base">
-                  Sed ut perspiciatis undmnis is iste natus error sit amet
-                  voluptatem totam rem aperiam.
+                  Experience boundless joy at Toy Land! Shop now and
+                  unleash the magic of childhood!
                 </p>
                 <p className="text-dark flex items-center text-sm font-medium">
                   <span className="text-primary mr-3">
@@ -45,7 +40,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a
-                      href='/'
+                      href="/"
                       className="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                     >
                       SaaS Development
@@ -53,7 +48,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='/'
+                      href="/"
                       className="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                     >
                       Our Products
@@ -61,7 +56,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='/'
+                      href="/"
                       className="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                     >
                       User Flow
@@ -69,7 +64,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='/'
+                      href="/"
                       className="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                     >
                       User Strategy
@@ -86,7 +81,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a
-                      href='/'
+                      href="/"
                       className="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                     >
                       About TailGrids
@@ -94,7 +89,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='/'
+                      href="/"
                       className="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                     >
                       Contact & Support
@@ -102,7 +97,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='/'
+                      href="/"
                       className="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                     >
                       Success History
@@ -110,7 +105,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='/'
+                      href="/"
                       className="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                     >
                       Setting & Privacy
@@ -127,7 +122,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a
-                      href='/'
+                      href="/"
                       className="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                     >
                       Premium Support
@@ -135,7 +130,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='/'
+                      href="/"
                       className="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                     >
                       Our Services
@@ -143,7 +138,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='/'
+                      href="/"
                       className="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                     >
                       Know Our Team
@@ -151,7 +146,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='/'
+                      href="/"
                       className="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                     >
                       Download App
@@ -167,7 +162,7 @@ const Footer = () => {
                 </h4>
                 <div className="mb-6 flex items-center">
                   <a
-                    href='/'
+                    href="/"
                     className="text-dark hover:bg-primary hover:border-primary mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-[#E5E5E5] hover:text-white sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
@@ -180,7 +175,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href='/'
+                    href="/"
                     className="text-dark hover:bg-primary hover:border-primary mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-[#E5E5E5] hover:text-white sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
@@ -193,7 +188,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href='/'
+                    href="/"
                     className="text-dark hover:bg-primary hover:border-primary mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-[#E5E5E5] hover:text-white sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
@@ -206,7 +201,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href='/'
+                    href="/"
                     className="text-dark hover:bg-primary hover:border-primary mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-[#E5E5E5] hover:text-white sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
