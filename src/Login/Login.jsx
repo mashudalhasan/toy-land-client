@@ -50,15 +50,23 @@ const Login = () => {
   };
   return (
     <div className="ml-5 md:ml-0">
-      <section className="bg-[#F4F7FF] py-20 lg:py-[120px]">
+      <section className="bg-sky-50 py-20 lg:py-[120px]">
         <div className="container mx-auto">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div className="relative mx-auto max-w-[525px] overflow-hidden bg-white py-16 px-10 text-center sm:px-12 md:px-[60px]">
+              <div className="relative mx-auto max-w-[525px] overflow-hidden bg-white py-16 px-5 text-center sm:px-12 md:px-[60px]">
                 <div className="mb-10 text-center md:mb-16">
-                  <Link to="/" className="mx-auto inline-block max-w-[160px]">
-                    <img src={logo} alt="logo" />
-                  </Link>
+                  <div className="flex justify-center items-center gap-8">
+                    <Link to="/" className="h-1/4 w-1/4">
+                      <img src={logo} alt="logo" />
+                    </Link>
+                    <div className="border-r border-gray-400 h-28"></div>
+                    <Link to="/">
+                      <p className="text-lg md:text-xl font-semibold mt-3 uppercase">
+                        Toy Land
+                      </p>
+                    </Link>
+                  </div>
                 </div>
                 <form onSubmit={handleLogin}>
                   <div className="mb-6">

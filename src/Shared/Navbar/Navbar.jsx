@@ -105,7 +105,7 @@ const Navbar = () => {
               className="mr-2 lg:mr-3 h-10 sm:h-12"
               alt="Toy Land Logo"
             />
-            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+            <span className="self-center whitespace-nowrap text-lg md:text-xl font-semibold dark:text-white uppercase">
               Toy Land
             </span>
           </div>

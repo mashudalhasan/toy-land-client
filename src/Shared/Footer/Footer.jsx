@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="mb-10 w-full">
                 <a href="/" className="mb-6 inline-block max-w-[160px]">
                   <img src={logo} alt="logo" className="w-1/2" />
-                  <span className="text-xl font-semibold">Toy Land</span>
+                  <span className="text-xl font-semibold uppercase">Toy Land</span>
                 </a>
 
                 <p className="text-body-color mb-7 text-base">

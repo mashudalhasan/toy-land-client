@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import UpdateMyToys from "../Pages/MyToys/UpdateMyToys";
 import ErrorPage from "../Shared/ErrorPage/ErrorPage";
 import Blog from "../Shared/Blog/Blog";
+import Terms from "../Shared/Terms/Terms";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "blog",
         element: <Blog></Blog>,
+      },
+      {
+        path: "terms",
+        element: <Terms></Terms>,
       },
       {
         path: "addToy",
