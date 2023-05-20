@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import logo from "../assets/logo.png";
 import { AuthContext } from "../providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 const SignUp = () => {
   const { createUser, profileUpdate } = useContext(AuthContext);
@@ -53,6 +54,7 @@ const SignUp = () => {
         console.log(createdUser);
         navigate(from, { replace: true });
         setError("");
+        toast.success("Registration successful");
 
         profileUpdate(createdUser, {
           displayName: name,
@@ -68,6 +70,7 @@ const SignUp = () => {
       .catch((error) => {
         console.error(error);
         setError(error.message);
+        toast.error(error.message + "🔥");
       });
   };
 

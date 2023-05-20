@@ -3,13 +3,13 @@ import logo from "../assets/logo.png";
 import { FcGoogle } from "react-icons/fc";
 import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
   const { signIn, googleSignIn } = useContext(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
-
 
   const from = location.state?.from?.pathname || "/";
 
@@ -19,6 +19,7 @@ const Login = () => {
         const loggedUser = result.user;
         console.log(loggedUser);
         navigate(from, { replace: true });
+        toast.success("Login successful");
       })
       .catch((error) => {
         console.error(error.message);
@@ -39,10 +40,12 @@ const Login = () => {
         console.log(loggedUser);
         setError("");
         event.target.reset();
+        toast.success("Login successful");
       })
       .catch((error) => {
         console.error(error.message);
         setError(error.message);
+        toast.error(error.message + "🔥");
       });
   };
   return (
