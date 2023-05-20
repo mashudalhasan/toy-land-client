@@ -7,7 +7,7 @@
       "name": "Toy World",
       "email": "toyworld@example.com"
     },
-    "price": 29.99,
+    "price": "29.99",
     "rating": 4.5,
     "quantity": 10,
     "description": "Experience the thrill of speed with this sleek red sports car toy. It comes with realistic details and smooth wheels for a smooth ride."
@@ -20,7 +20,7 @@
       "name": "Kids' Toys",
       "email": "kidstoys@example.com"
     },
-    "price": 24.99,
+    "price": "24.99",
     "rating": 4.2,
     "quantity": 7,
     "description": "Race against your friends with this vibrant yellow race car toy. It's designed for speed and agility, providing endless fun on the racetrack."
@@ -33,7 +33,7 @@
       "name": "Kids' Paradise",
       "email": "kidsparadise@example.com"
     },
-    "price": 19.99,
+    "price": "19.99",
     "rating": 4.2,
     "quantity": 5,
     "description": "Get ready for some off-road adventures with this powerful blue monster truck toy. It features oversized wheels and a sturdy construction for rough terrains."
@@ -46,7 +46,7 @@
       "name": "Toys Unlimited",
       "email": "toysunlimited@example.com"
     },
-    "price": 14.99,
+    "price": "14.99",
     "rating": 4.0,
     "quantity": 8,
     "description": "Load up and deliver goods with this green pickup truck toy. It has a realistic design, working doors, and a spacious cargo bed for all your hauling needs."
@@ -59,7 +59,7 @@
       "name": "Toys Galore",
       "email": "toysgalore@example.com"
     },
-    "price": 39.99,
+    "price": "39.99",
     "rating": 4.8,
     "quantity": 3,
     "description": "Take to the skies with this amazing yellow fighter jet toy. It has realistic detailing, retractable landing gear, and movable wings for high-flying action."
@@ -72,7 +72,7 @@
       "name": "Playtime Toys",
       "email": "playtimetoys@example.com"
     },
-    "price": 34.99,
+    "price": "34.99",
     "rating": 4.6,
     "quantity": 6,
     "description": "Pilot your own adventures with this classic red propeller plane toy. It features a spinning propeller, a cockpit that opens, and a vintage-inspired design."

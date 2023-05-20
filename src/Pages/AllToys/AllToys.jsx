@@ -1,28 +1,59 @@
+import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import AllToysTable from "./AllToysTable";
+import { FaSortAlphaDown, FaSortAlphaUp } from "react-icons/fa";
 
 const AllToys = () => {
   const shops = useLoaderData();
-//   console.log(toys);
+  const [sortOrder, setSortOrder] = useState("asc"); // State for sorting order
+
+  const handlePriceSort = () => {
+    // Toggle the sorting order when Price button is clicked
+    setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+  };
+
+  const sortedShops = [...shops]; // Create a copy of the original shops array
+  sortedShops.sort((a, b) => {
+    // Sort the array based on price field and sorting order
+    const priceA = parseFloat(a.price);
+    const priceB = parseFloat(b.price);
+    if (sortOrder === "asc") {
+      return priceA - priceB;
+    } else {
+      return priceB - priceA;
+    }
+  });
+
+  const SortIcon = sortOrder === "asc" ? FaSortAlphaDown : FaSortAlphaUp;
 
   return (
     <div className="my-10">
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
-          <thead >
+          <thead>
             <tr>
               <th></th>
               <th>Toy Name</th>
               <th>Seller</th>
               <th>Category</th>
-              <th>Price</th>
+              <th>
+                <button
+                  className="flex items-center gap-1 uppercase"
+                  onClick={handlePriceSort}
+                >
+                  Price{" "}
+                  <span>
+                    <SortIcon className="text-base"/>
+                  </span>
+                </button>
+              </th>
               <th>Quantity</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
-            {shops.map((shop) => (
+            {sortedShops.map((shop) => (
               <AllToysTable key={shop._id} shop={shop}></AllToysTable>
             ))}
           </tbody>
