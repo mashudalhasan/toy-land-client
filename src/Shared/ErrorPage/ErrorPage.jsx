@@ -2,7 +2,7 @@ const ErrorPage = () => {
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center">
       <svg
-        className="w-1/2 md:1/3 lg:w-1/4 text-blue-600"
+        className="w-1/2 md:1/3 lg:w-1/4 text-info"
         xmlns="http://www.w3.org/2000/svg"
         data-name="Layer 1"
         viewBox="0 0 860.13137 571.14799"
@@ -162,7 +162,7 @@ const ErrorPage = () => {
         </p>
         <a
           href="/"
-          className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-gray-100 px-4 py-2 mt-12 rounded transition duration-150"
+          className="flex items-center space-x-2 bg-info hover:bg-sky-500 text-gray-100 px-4 py-2 mt-12 rounded transition duration-150"
           title="Return Home"
         >
           <svg
