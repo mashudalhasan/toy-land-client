@@ -154,7 +154,7 @@ const Reviews = () => {
               <div className="flex items-center gap-4">
                 <img
                   alt="Woman"
-                  src="https://cdn3d.iconscout.com/3d/premium/thumb/cadar-hijab-girl-5681511-4729303.png?f=webp"
+                  src="https://img.freepik.com/premium-photo/3d-women-hijab-syar-i-with-cadar-pink-eye-glasses-black-color-niqab_477250-1.jpg"
                   className="h-16 w-16 rounded-full object-cover"
                 />
 
