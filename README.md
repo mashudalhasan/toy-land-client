@@ -1,4 +1,4 @@
-# Arabian Delights Repository
+# Toy Land Repository
 
 A simple React website built with React & React Router Dom with MongoDB.
 
