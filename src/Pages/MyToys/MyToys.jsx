@@ -12,7 +12,7 @@ const MyToys = () => {
   const [toys, setToys] = useState(myToys);
   const [sortOrder, setSortOrder] = useState("asc"); // State for sorting order
 
-  const url = `http://localhost:5000/toys?email=${user?.email}`;
+  const url = `https://toy-land-server-dusky.vercel.app/toys?email=${user?.email}`;
 
   useEffect(() => {
     fetch(url)
@@ -50,7 +50,7 @@ const MyToys = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/toys/${id}`, {
+        fetch(`https://toy-land-server-dusky.vercel.app/toys/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

@@ -7,7 +7,7 @@ const ShopByCategory = () => {
   const [shops, setShops] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://toy-land-server-dusky.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setShops(data));
   }, []);
@@ -17,7 +17,7 @@ const ShopByCategory = () => {
   };
 
   return (
-    <div className="mb-10" data-aos="fade-left">
+    <div className="mb-10" >
       <h2 className="text-center text-3xl font-bold mb-5">Shop By Category</h2>
       <Tabs>
         <TabList>

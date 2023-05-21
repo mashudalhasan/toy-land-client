@@ -1,8 +1,16 @@
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
+Aos.init();
 
 const AboutUs = () => {
   return (
-    <div className="mb-10 w-11/12 mx-auto" data-aos="fade-right">
+    <div
+      className="mb-10 w-11/12 mx-auto"
+      data-aos="fade-right"
+      data-aos-duration="2000"
+    >
       <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
         <div className="container mx-auto">
           <div className="-mx-4 flex flex-wrap items-center justify-between">
@@ -621,10 +629,10 @@ const AboutUs = () => {
                   memories filled with joy and imagination.
                 </p>
                 <p className="text-body-color mb-12 text-base">
-                  At our store, we go the extra mile to make your
-                  shopping experience extraordinary. With a carefully curated
-                  collection of toys that inspire creativity, promote learning,
-                  and ignite imagination, we ensure every visit is an adventure.
+                  At our store, we go the extra mile to make your shopping
+                  experience extraordinary. With a carefully curated collection
+                  of toys that inspire creativity, promote learning, and ignite
+                  imagination, we ensure every visit is an adventure.
                 </p>
                 <Link
                   to="/login"

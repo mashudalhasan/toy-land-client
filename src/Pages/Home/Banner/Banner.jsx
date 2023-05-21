@@ -9,7 +9,7 @@ const Banner = () => {
         <Lottie
           animationData={bannerCar}
           loop={true}
-          className="w-full lg:max-w-lg h-auto transform rotate-180 scale-y-[-1]"
+          className="w-full lg:w-1/2 h-auto transform rotate-180 scale-y-[-1]"
         />
         <div className="lg:w-1/2">
           <h1 className="text-4xl lg:text-5xl font-bold">

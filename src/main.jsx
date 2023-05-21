@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import "react-tippy/dist/tippy.css";
+import "swiper/swiper.min.css";
 import "aos/dist/aos.css";
 import { RouterProvider } from "react-router-dom";
 import router from "./Routes/Routes.jsx";

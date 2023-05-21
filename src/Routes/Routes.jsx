@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: "alltoys",
         element: <AllToys></AllToys>,
-        loader: () => fetch("http://localhost:5000/products"),
+        loader: () => fetch("https://toy-land-server-dusky.vercel.app/products"),
       },
       {
         path: "login",
@@ -67,7 +67,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/toys/${params.id}`),
+          fetch(`https://toy-land-server-dusky.vercel.app/toys/${params.id}`),
       },
     ],
   },
