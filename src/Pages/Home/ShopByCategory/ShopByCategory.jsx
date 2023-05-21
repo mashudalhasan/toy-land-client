@@ -7,7 +7,7 @@ const ShopByCategory = () => {
   const [shops, setShops] = useState([]);
 
   useEffect(() => {
-    fetch("https://toy-land-server-dusky.vercel.app/products")
+    fetch("https://toy-land-server-dusky.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => setShops(data));
   }, []);

@@ -75,7 +75,7 @@ const Reviews = () => {
                 </div>
               </div>
 
-              <p className="text-sm md:text-base line-clamp-2 sm:line-clamp-none mt-4 text-gray-500">
+              <p className="text-sm md:text-base mt-4 text-gray-500">
                 &quot;Absolutely thrilled with my purchase from Toy Land! The
                 red sports car I bought for my son is of exceptional quality and
                 the attention to detail is remarkable. He can&apos;t get enough
@@ -141,7 +141,7 @@ const Reviews = () => {
                 </div>
               </div>
 
-              <p className="text-sm md:text-base line-clamp-2 sm:line-clamp-none mt-4 text-gray-500">
+              <p className="text-sm md:text-base mt-4 text-gray-500">
                 &quot;Toy Land is my go-to store for all things toy-related. I
                 recently bought the blue monster truck for my nephew, and
                 he&apos;s been having a blast with it. The selection is
@@ -154,7 +154,7 @@ const Reviews = () => {
               <div className="flex items-center gap-4">
                 <img
                   alt="Woman"
-                  src="https://media.istockphoto.com/id/1296058958/vector/happy-young-woman-watching-into-rounded-frame-isolated-on-white-3d-vector-illustration.jpg?s=612x612&w=0&k=20&c=x9lmmoKVqxRro-G3S48IWIKQiykb2Yv1CkuiizDJ6gw="
+                  src="https://cdn3d.iconscout.com/3d/premium/thumb/cadar-hijab-girl-5681511-4729303.png?f=webp"
                   className="h-16 w-16 rounded-full object-cover"
                 />
 
@@ -208,7 +208,7 @@ const Reviews = () => {
                 </div>
               </div>
 
-              <p className="text-sm md:text-base line-clamp-2 sm:line-clamp-none mt-4 text-gray-500">
+              <p className="text-sm md:text-base mt-4 text-gray-500">
                 &quot;I can&apos;t say enough good things about Toy Land. The
                 yellow fighter jet I ordered exceeded my expectations. It is
                 sturdy, looks amazing, and even comes with movable parts. My

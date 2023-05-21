@@ -136,7 +136,7 @@ const Navbar = () => {
           <Link
             onClick={handleLogOut}
             className="hidden lg:visible lg:inline-flex items-center gap-1 rounded-md bg-info text-white px-2 lg:px-8 py-3 transition hover:bg-sky-500 active:bg-sky-500"
-            to="/login"
+            to="/"
           >
             <span className="text-sm font-medium"> Logout </span>{" "}
             <svg

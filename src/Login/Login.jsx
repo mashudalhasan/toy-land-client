@@ -32,7 +32,6 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
 
     signIn(email, password)
       .then((result) => {
@@ -40,6 +39,7 @@ const Login = () => {
         console.log(loggedUser);
         setError("");
         event.target.reset();
+        navigate(from, { replace: true });
         toast.success("Login successful");
       })
       .catch((error) => {

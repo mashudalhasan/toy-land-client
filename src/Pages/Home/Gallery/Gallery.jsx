@@ -13,10 +13,10 @@ const Gallery = () => {
     <div className="mb-10">
       <Marquee
         className="h-28 lg:h-40"
-        speed={50}
+        speed={100}
         pauseOnHover={true}
       >
-        <div className="flex justify-evenly items-center gap-10">
+        <div className="flex justify-evenly items-center gap-3 md:gap-10">
           <Lottie
             animationData={redCar}
             loop={true}
