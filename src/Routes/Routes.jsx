@@ -11,6 +11,8 @@ import UpdateMyToys from "../Pages/MyToys/UpdateMyToys";
 import ErrorPage from "../Shared/ErrorPage/ErrorPage";
 import Blog from "../Shared/Blog/Blog";
 import Terms from "../Shared/Terms/Terms";
+import About from "../Shared/About/About";
+import History from "../Shared/History/History";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +27,8 @@ const router = createBrowserRouter([
       {
         path: "alltoys",
         element: <AllToys></AllToys>,
-        loader: () => fetch("https://toy-land-server-dusky.vercel.app/products"),
+        loader: () =>
+          fetch("https://toy-land-server-dusky.vercel.app/products"),
       },
       {
         path: "login",
@@ -42,6 +45,14 @@ const router = createBrowserRouter([
       {
         path: "terms",
         element: <Terms></Terms>,
+      },
+      {
+        path: "about",
+        element: <About></About>,
+      },
+      {
+        path: "history",
+        element: <History></History>,
       },
       {
         path: "addToy",
