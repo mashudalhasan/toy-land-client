@@ -31,6 +31,9 @@ const AllToys = () => {
     }
   });
 
+  // Limit the sortedShops array to 20 elements
+  const limitedShops = sortedShops.slice(0, 20);
+
   const SortIcon = sortOrder === "asc" ? FaSortAlphaDown : FaSortAlphaUp;
 
   return (
@@ -72,7 +75,7 @@ const AllToys = () => {
             </tr>
           </thead>
           <tbody>
-            {sortedShops.map((shop) => (
+            {limitedShops.map((shop) => (
               <AllToysTable key={shop._id} shop={shop}></AllToysTable>
             ))}
           </tbody>

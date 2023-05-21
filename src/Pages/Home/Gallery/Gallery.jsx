@@ -14,6 +14,7 @@ const Gallery = () => {
       <Marquee
         className="h-28 lg:h-40"
         speed={100}
+        direction="right"
         pauseOnHover={true}
       >
         <div className="flex justify-evenly items-center gap-3 md:gap-10">

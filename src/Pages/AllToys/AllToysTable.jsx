@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 const AllToysTable = ({ shop }) => {
   const { user } = useContext(AuthContext);
-  const { name, picture, price, quantity, category } = shop;
+  const { sellerName, name, picture, price, quantity, category } = shop;
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -41,7 +41,7 @@ const AllToysTable = ({ shop }) => {
         </div>
       </td>
       <td>{name}</td>
-      <td>{user?.displayName}</td>
+      <td>{sellerName}</td>
       <td>{category}</td>
       <td>${price}</td>
       <td>{quantity}</td>

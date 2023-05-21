@@ -124,14 +124,21 @@ const Navbar = () => {
               theme="light"
               animation="perspective"
             >
-              <img
-                className="w-10 h-10 rounded-full"
-                src={user?.photoURL}
-                alt=""
-              />
+              {user.photoURL ? (
+                <img
+                  className="w-10 h-10 rounded-full"
+                  src={user.photoURL}
+                  alt=""
+                />
+              ) : (
+                <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-300 text-gray-600">
+                  {user.displayName && user.displayName.charAt(0)}
+                </div>
+              )}
             </Tooltip>
           </span>
         )}
+
         {user ? (
           <Link
             onClick={handleLogOut}
