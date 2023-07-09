@@ -10,7 +10,7 @@ import Marquee from "react-fast-marquee";
 
 const Gallery = () => {
   return (
-    <div className="mb-10">
+    <div className="mb-10 overflow-hidden">
       <Marquee
         className="h-28 lg:h-40"
         speed={100}
